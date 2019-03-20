@@ -10,5 +10,7 @@ public class TestProject {
 		
 		System.out.println("Hello World"); //prints "Hello World"
 		
+		//I'm adding a comment to test
+		
 	}
 }
