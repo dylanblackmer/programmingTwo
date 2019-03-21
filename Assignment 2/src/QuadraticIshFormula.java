@@ -27,7 +27,7 @@ public class QuadraticIshFormula {
 		double num2B = numB * 2; //new var for 2 times numB
 		
 		double numerator = numAA + num2B + numC; //adds together the elements included in the numerator of the formula
-		double finalAnswer = numerator / 2; //divides the numerator by 2 to recieve the fianl answer
+		double finalAnswer = numerator / 2; //divides the numerator by 2 to receive the final answer
 		
 	//output
 		System.out.println("");
