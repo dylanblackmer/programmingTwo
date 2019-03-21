@@ -23,8 +23,8 @@ public class QuadraticIshFormula {
 		double numC = letterInput.nextDouble();
 		
 	//calculations
-		double numAA = numA * numA; //creates new var for numA squared
-		double num2B = numB * 2; //new var for 2 times numB
+		double numAA = numA * numA; //creates new variable for numA squared
+		double num2B = numB * 2; //new variable for 2 times numB
 		
 		double numerator = numAA + num2B + numC; //adds together the elements included in the numerator of the formula
 		double finalAnswerDouble = numerator / 2; //divides the numerator by 2 to receive the final answer
