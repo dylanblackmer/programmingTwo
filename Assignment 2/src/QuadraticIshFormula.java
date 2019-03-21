@@ -27,12 +27,24 @@ public class QuadraticIshFormula {
 		double num2B = numB * 2; //new var for 2 times numB
 		
 		double numerator = numAA + num2B + numC; //adds together the elements included in the numerator of the formula
-		double finalAnswer = numerator / 2; //divides the numerator by 2 to receive the final answer
+		double finalAnswerDouble = numerator / 2; //divides the numerator by 2 to receive the final answer
 		
 	//output
+		//if statement to check whether or not to print finalAnswer as a double or integer, purely for looks and doesn't affect functionality
+		int finalAnswerInt = (int) finalAnswerDouble;
+		if (finalAnswerDouble - finalAnswerInt == 0.0) { //checks to see if there are any numbers after the decimal in finalAnswerDouble
+			System.out.println("");
+			System.out.print("Final Answer: " + finalAnswerInt); //prints output without decimals
+		} else {
+			System.out.println("");
+			System.out.print("Final Answer: " + finalAnswerDouble); //prints output with decimals
+		}
+		
+	/*	obsolete code
+	//output (old)
 		System.out.println("");
 		System.out.print(finalAnswer);
-		
+		*/
 		
 		
 	}
