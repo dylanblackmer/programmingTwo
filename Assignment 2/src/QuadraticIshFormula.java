@@ -45,7 +45,7 @@ public class QuadraticIshFormula {
 		System.out.println("");
 		System.out.print(finalAnswer);
 		*/
-		
+		letterInput.close(); //closes input scanner
 		
 	}
 
