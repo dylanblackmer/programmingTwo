@@ -3,8 +3,9 @@
 //imports
 import java.util.Scanner; //used for Scanner functionality
 
-public class YellowPages {
 
+public class YellowPages {
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -26,6 +27,7 @@ public class YellowPages {
 		String state = input.nextLine();
 		System.out.print("Zip Code: ");
 		int zipCode = input.nextInt();
+		
 		
 	//output
 		System.out.println("");
