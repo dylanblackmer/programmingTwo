@@ -31,6 +31,8 @@ public class YellowPages {
 		
 	//output
 		System.out.println("");
+		System.out.println("");
+		System.out.println("");
 		System.out.println("Your Mailing Address is:\n\n\n" + firstName + " " + lastName + "\n" + streetNum + " " + streetName + "\n" + city + ", " + state + " " + zipCode);
 		
 		
