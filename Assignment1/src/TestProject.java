@@ -17,6 +17,7 @@ public class TestProject {
 		//I'm adding a comment to test (written from laptop)
 		 */
 		
+		/*
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("Input: ");
@@ -24,9 +25,18 @@ public class TestProject {
 		
 		System.out.println(num);
 		
-		int numInt = (int) num;
+		num = (int) num;
 		
-		System.out.println(numInt);
+		System.out.println(num);
+		
+		input.close();
+		*/
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Input: ");
+		int num = (int) input.nextDouble(); //you cannot call the var as an "int" but then set the scanner to look for a double or string
+		System.out.println(num);
 		
 	}
 }
