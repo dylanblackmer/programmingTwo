@@ -20,7 +20,7 @@ public class ShowMeTheMoney {
 		int hundreds = cents / 10000; //divides cent amount by 10,000 (one hundred dollars in cents), set as integer so program won't take the decimal into account.
 		cents = cents % 10000; //takes the remainder after the hundreds have been taken out, resets original variable.
 		int tens = cents / 1000; //divides cent remainder by 1,000 (ten dollars in cents), similar to hundreds set as integer.
-		cents = cents % 1000; //once again takes remainder, this cycle repeats for all change catagories.
+		cents = cents % 1000; //once again takes remainder, this cycle repeats for all change categories.
 		int ones = cents / 100;
 		cents = cents % 100;
 		int quarters = cents / 25;
