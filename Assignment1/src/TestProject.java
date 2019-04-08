@@ -4,6 +4,8 @@
 //imports
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 //actual class
 public class TestProject {
 	
@@ -32,11 +34,15 @@ public class TestProject {
 		input.close();
 		*/
 		
+		/*
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("Input: ");
 		int num = (int) input.nextDouble(); //you cannot call the var as an "int" but then set the scanner to look for a double or string
 		System.out.println(num);
+		*/
+		
+		JOptionPane.showMessageDialog(null, "This is a popup box");
 		
 	}
 }
