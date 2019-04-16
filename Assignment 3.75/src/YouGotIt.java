@@ -2,8 +2,6 @@
 
 //imports
 import java.util.Random;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class YouGotIt {
@@ -45,7 +43,7 @@ public class YouGotIt {
 			}
 			System.out.println("Guess Count: " + counter); //displays number of guesses for debug
 			if ((counter >= 10) && (num != guess)) { //checks to ensure user hasen't gone over guess limit
-				JOptionPane.showMessageDialog(null, "You ran out of guesses before you guessed correctly... better luck next time!", "You Lose... :(", JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null, "You ran out of guesses before .you guessed correctly...\nThe number was " + num + ".\nBetter luck next time!", "You Lose... :(", JOptionPane.PLAIN_MESSAGE);
 			}
 			
 			
