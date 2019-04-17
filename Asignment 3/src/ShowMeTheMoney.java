@@ -66,7 +66,7 @@ public class ShowMeTheMoney {
 			System.out.println(dimes + "\tDime");
 		}
 		if ((nickels == 0) || (nickels >= 2)) {
-			System.out.println(nickels + "\tNickels");
+/* nice */	System.out.println(nickels + "\tNickels");
 		} else {
 			System.out.println(nickels + "\tNickel");
 		} 
