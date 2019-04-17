@@ -1,8 +1,8 @@
-import javax.swing.JOptionPane;
-
 //Dylan Blackmer     GrapeVine
 
-//import
+//imports
+import javax.swing.JOptionPane;
+
 
 public class GrapeVine {
 
@@ -11,9 +11,9 @@ public class GrapeVine {
 
 	//variable initialization
 		int price = 0; //sets default price of table, determined by type of wood or whether or not table is finished (with sealant).
-		int wood = 0;
-		boolean finish = false;
-		boolean confirm = false;
+		int wood = 0; //sets default wood selection (0 corresponds with no type of wood)
+		boolean finish = false; //sets initial selection of sealant choice
+		boolean confirm = false; //sets initial confirmation choice
 	
 	//welcome message to users, explaining how to use the program
 		JOptionPane.showMessageDialog(null, "Welcome to the Grape Vine furniture company!\nFirst, you will be asked to choose the type of wood you'd like. The price will be based on the type of wood.\nThen, you will decide whether or not you'd like a finsihed table (a table with sealant). This will increase the price.\nFinally, your final selection and price will be displayed.", "Introduction", JOptionPane.INFORMATION_MESSAGE);
@@ -95,25 +95,29 @@ public class GrapeVine {
 			}
 		}
 		
-		System.out.println("Price: " + price);
-		confirm = false;
+		System.out.println("Price: " + price); //outputs price to console for debugging
+		confirm = false; //resets "confirm" boolean to false for next while loop
 		
 	//sealant selection
 		while (confirm == false) {
 			
-		//Begins by asking the user 
+		//Begins by asking the user whether or they want a table with sealant, then asks them to confirm, changing the boolean to true or false, potentially breaking the while loop
 			String finishSelection = JOptionPane.showInputDialog(null, "Would you like to add finishing to your table for an upcharge of $285? (Y/N)\n ", "Finish Selection", JOptionPane.QUESTION_MESSAGE);
-			if ( finishSelection.equals("Y") || finishSelection.equals("y")) {
+			if ( finishSelection.equals("Y") || finishSelection.equals("y")) { //user chooses yes to sealant
+			//prompts user to confirm their selection
 				String finishConfirm = JOptionPane.showInputDialog(null, "You've chosen sealant.\nIs this correct? (Y/N)", "Confirm", JOptionPane.QUESTION_MESSAGE);
 				if (finishConfirm.equals("Y") || finishConfirm.equals("y")) {
+				//changes boolean and adjusts price
 					confirm = true;
 					finish = true;
 					price += 285;
 				} else {
+				//changes boolean and provides error message
 					confirm = false;
 					JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 				}
-			} else if (finishSelection.equals("N") || finishSelection.equals("n")) {
+			} else if (finishSelection.equals("N") || finishSelection.equals("n")) { //user chooses no sealant
+			//this mini block is similar in functionality to the previous block
 				String finishConfirm = JOptionPane.showInputDialog(null, "You've chosen no sealant.\nIs this correct? (Y/N)", "Confirm", JOptionPane.QUESTION_MESSAGE);
 				if (finishConfirm.equals("Y") || finishConfirm.equals("y")) {
 					confirm = true;
@@ -122,13 +126,16 @@ public class GrapeVine {
 					confirm = false;
 					JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 				}
-			} else {
+			} else { //if the user inputs anything other than "y" or "n", program defaults to and unfinished table, breaking the while loop without adjusting price
 				confirm = true;
 			}
 		}
-		confirm = false;
-		System.out.println("Price: " + price);
-		System.out.println(wood);
+		
+		confirm = false; //resets confirm boolean (not necessarily needed)
+		System.out.println("Price: " + price); //outputs final price to console for debug
+		
+	//final checkout/output
+		//first checks whether or not user chooses sealant, after it checks which wood choice was made at the beginning, it outputs a similar checkout, with slight changes in price and wood types
 		if (finish == true) {
 			if (wood == 1) {
 				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
@@ -159,4 +166,4 @@ public class GrapeVine {
 			}
 		}
 	}
-}
+} //nice
