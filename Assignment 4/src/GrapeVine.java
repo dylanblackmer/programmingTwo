@@ -66,7 +66,7 @@ public class GrapeVine {
 					price += 975;
 				} else {
 					confirm = false;
-					JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
+/* nice */			JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 				}
 				
 			} else if (wood == 5) {
@@ -166,4 +166,4 @@ public class GrapeVine {
 			}
 		}
 	}
-} //nice
+}
