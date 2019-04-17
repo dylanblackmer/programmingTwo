@@ -138,31 +138,31 @@ public class GrapeVine {
 		//first checks whether or not user chooses sealant, after it checks which wood choice was made at the beginning, it outputs a similar checkout, with slight changes in price and wood types
 		if (finish == true) {
 			if (wood == 1) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table with finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 2) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Oak table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Oak table with finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 3) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Mahogany table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Mahogany table with finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 4) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Cedar table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Cedar table with finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 5) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Bocote table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Bocote table with finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 6) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Sandelwood table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Sandelwood table with finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			}
 		} else if (finish == false) {
 			if (wood == 1) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table without finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 2) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Oak table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Oak table without finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 3) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Mahogany table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Mahogany table without finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 4) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Cedar table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Cedar table without finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 5) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Bocote table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Bocote table without finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			} else if (wood == 6) {
-				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Sandelwood table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Sandelwood table without finish\nPrice: $" + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 	}
