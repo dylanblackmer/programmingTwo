@@ -4,7 +4,6 @@ import javax.swing.JOptionPane;
 
 //import
 
-
 public class GrapeVine {
 
 	public static void main(String[] args) {
@@ -12,20 +11,22 @@ public class GrapeVine {
 
 	//variable initialization
 		int price = 0; //sets default price of table, determined by type of wood or whether or not table is finished (with sealant).
-		int wood;
+		int wood = 0;
 		boolean finish = false;
 		boolean confirm = false;
 	
 	//welcome message to users, explaining how to use the program
-		JOptionPane.showMessageDialog(null, "Welcome to the Grape Vine furniture company!\nFirst, you will be asked to choose the type of wood you'd like. The price will be based on the type of wood.\nThen, you will decide whether no not you'd like a finsihed table (a table with sealant). This will increase the price.\nFinally, your final selection and price will be displayed.", "Introduction", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Welcome to the Grape Vine furniture company!\nFirst, you will be asked to choose the type of wood you'd like. The price will be based on the type of wood.\nThen, you will decide whether or not you'd like a finsihed table (a table with sealant). This will increase the price.\nFinally, your final selection and price will be displayed.", "Introduction", JOptionPane.INFORMATION_MESSAGE);
 	
 	//wood input
-		while (confirm == false) {
+		while (confirm == false) { //a boolean that stays false until the user confirms their selection, which turns "confirm" true and breaks the while loop.
 		
+		//Begins by asking the user what wood they'd like along with their options and then puts the value into an integer called "wood" and then outputs the value into the console for debugging
 			String woodSelection = JOptionPane.showInputDialog(null, "Please select your wood type (number).\n\n1. Pine\n2. Oak\n3. Mahogany\n4. Cedar\n5. Bocote\n6. Sandelwood\n ", "Wood Selection", JOptionPane.QUESTION_MESSAGE);
 			wood = Integer.parseInt(woodSelection);
 			System.out.println("Wood: " + wood);
 			if (wood == 1) {
+			//After user makes their selection, the program prompts them to confirm their selection changing "confirm" to true or false and adding to their price
 				String woodConfirm = JOptionPane.showInputDialog(null, "You have chosen Pine.\nIs this correct? (Y/N)\n ", "Confirm", JOptionPane.QUESTION_MESSAGE);
 				if ((woodConfirm.equals("Y") || (woodConfirm.equals("y")))) {
 					confirm = true;
@@ -36,6 +37,7 @@ public class GrapeVine {
 				}
 				
 			} else if (wood == 2) {
+			//All if/else loops in the "wood input" block have similar function
 				String woodConfirm = JOptionPane.showInputDialog(null, "You have chosen Oak.\nIs this correct? (Y/N)\n ", "Confirm", JOptionPane.QUESTION_MESSAGE);
 				System.out.println(woodConfirm);
 				if ((woodConfirm.equals("Y") || (woodConfirm.equals("y")))) {
@@ -91,12 +93,15 @@ public class GrapeVine {
 			} else {
 				JOptionPane.showMessageDialog(null, "We're sorry. We don't have that item in stock. Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 			}
-			
 		}
+		
 		System.out.println("Price: " + price);
 		confirm = false;
+		
+	//sealant selection
 		while (confirm == false) {
 			
+		//Begins by asking the user 
 			String finishSelection = JOptionPane.showInputDialog(null, "Would you like to add finishing to your table for an upcharge of $285? (Y/N)\n ", "Finish Selection", JOptionPane.QUESTION_MESSAGE);
 			if ( finishSelection.equals("Y") || finishSelection.equals("y")) {
 				String finishConfirm = JOptionPane.showInputDialog(null, "You've chosen sealant.\nIs this correct? (Y/N)", "Confirm", JOptionPane.QUESTION_MESSAGE);
@@ -123,11 +128,35 @@ public class GrapeVine {
 		}
 		confirm = false;
 		System.out.println("Price: " + price);
+		System.out.println(wood);
 		if (finish == true) {
 			if (wood == 1) {
 				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 2) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Oak table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 3) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Mahogany table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 4) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Cedar table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 5) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Bocote table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 6) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Sandelwood table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			}
+		} else if (finish == false) {
+			if (wood == 1) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 2) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Oak table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 3) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Mahogany table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 4) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Cedar table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 5) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Bocote table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			} else if (wood == 6) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Sandelwood table without finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 	}
-
 }
