@@ -66,7 +66,7 @@ public class ShowMeMoreMoney {
 		if ((nickels == 0) || (nickels >= 2)) {
 			nickel = "Nickels";
 		} else {
-			nickel = "Nickel";
+/* nice */	nickel = "Nickel";
 		} 
 		if ((pennies == 0) || (pennies >= 2)) {
 			penny = "Pennies";
