@@ -48,7 +48,6 @@ public class GrapeVine {
 				
 			} else if (wood == 3) {
 				String woodConfirm = JOptionPane.showInputDialog(null, "You have chosen Mahogany.\nIs this correct? (Y/N)\n ", "Confirm", JOptionPane.QUESTION_MESSAGE);
-				System.out.println(woodConfirm);
 				if ((woodConfirm.equals("Y") || (woodConfirm.equals("y")))) {
 					confirm = true;
 					price += 1210;
@@ -89,10 +88,12 @@ public class GrapeVine {
 					confirm = false;
 					JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 				}
+			} else {
+				JOptionPane.showMessageDialog(null, "We're sorry. We don't have that item in stock. Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 			}
 			
 		}
-		
+		System.out.println("Price: " + price);
 		confirm = false;
 		while (confirm == false) {
 			
@@ -101,13 +102,31 @@ public class GrapeVine {
 				String finishConfirm = JOptionPane.showInputDialog(null, "You've chosen sealant.\nIs this correct? (Y/N)", "Confirm", JOptionPane.QUESTION_MESSAGE);
 				if (finishConfirm.equals("Y") || finishConfirm.equals("y")) {
 					confirm = true;
+					finish = true;
 					price += 285;
 				} else {
 					confirm = false;
 					JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
 				}
+			} else if (finishSelection.equals("N") || finishSelection.equals("n")) {
+				String finishConfirm = JOptionPane.showInputDialog(null, "You've chosen no sealant.\nIs this correct? (Y/N)", "Confirm", JOptionPane.QUESTION_MESSAGE);
+				if (finishConfirm.equals("Y") || finishConfirm.equals("y")) {
+					confirm = true;
+					finish = false;
+				} else {
+					confirm = false;
+					JOptionPane.showMessageDialog(null, "Sorry about that! Please select again.", "Oops!", JOptionPane.ERROR_MESSAGE);
+				}
+			} else {
+				confirm = true;
 			}
-			
+		}
+		confirm = false;
+		System.out.println("Price: " + price);
+		if (finish == true) {
+			if (wood == 1) {
+				JOptionPane.showMessageDialog(null, "Thanks for shopping with Grape Vine today!\nHere's your final order:\n\nTable: Pine table with finish\nPrice: " + price + "\n\nHave a nice day!", "Checout", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 	}
 
