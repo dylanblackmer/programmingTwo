@@ -11,7 +11,7 @@ public class Methods {
 		var = x;
 	}
 	
-	public static String methodMan(int repeat, double num) {
+	public String methodMan(int repeat, double num) {
 		double newNumber = repeat * num;
 		if (((newNumber > 0) && (newNumber <= 5)) || ((newNumber >= 90) && (newNumber <= 110))) {
 			return "You had a cool number. Here it is: " + newNumber;
@@ -20,7 +20,10 @@ public class Methods {
 		}
 	}
 	
-	public static double rZA(boolean doYouLike) {
+//methods
+	
+	//rZA
+	public double rZA(boolean doYouLike) {
 		if (doYouLike) {
 			return 63.7;
 		} else {
@@ -28,7 +31,8 @@ public class Methods {
 		}
 	}
 	
-	public static int gZA(String num1, String num2) {
+	//gZA
+	public int gZA(String num1, String num2) {
 		int x = 0; //represents the first number as an int
 		int y = 0; //represents the second number as an int
 		
@@ -52,6 +56,8 @@ public class Methods {
 			x = 8;
 		} else if (num1.equals("nine") || num1.equals("Nine")) {
 			x = 9;
+		} else {
+			return 999;
 		}
 		
 		if (num2.equals("zero") || num2.equals("Zero")) {
@@ -74,9 +80,36 @@ public class Methods {
 			y = 8;
 		} else if (num2.equals("nine") || num2.equals("Nine")) {
 			y = 9;
+		} else {
+			return 999;
 		}
 		
 		return x + y;
 	}
 	
+	//raekwon
+	public boolean raekwon(int x, int y, int z) {
+		int total = x + y + z;
+		if ((total % 10) == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	//inspectahDeck
+	public String inspectahDeck(double x, int y) {
+		double total = x + y;
+		if (total < 50) {
+			return "Number too small.";
+		} else if (total > 50) {
+			return "Number too big.";
+		} else if (total == 50) {
+			return "Number is juuuust right.";
+		} else {
+			return null;
+		}
+	}
+	
+	//cappadonna
 }
