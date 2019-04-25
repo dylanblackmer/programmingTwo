@@ -37,7 +37,7 @@ public class Methods {
 		//String name = JOptionPane.showInputDialog(null, "You found our secret album, welcome to the clan.\n\nWhat's your name??", "Congrats and welcome!", JOptionPane.INFORMATION_MESSAGE);
 		//JOptionPane.showMessageDialog(null, "1. Method Man\n2. RZA\n3. Ol' Dirty Bastard\n4. GZA\n5. Ghostface Killah\n6. " + name + "\n7. Raekwon\n8. Inspectah Deck\n9. U-God\n10. Cappadonna\n\nWelcome to the clan.", "The Clan", JOptionPane.PLAIN_MESSAGE);
 		Scanner input = new Scanner(System.in);
-		System.out.print("You found our secret album, welcome to the clan.\n\nWhat's your name?? ");
+		System.out.print("\nYou found our secret album, welcome to the clan.\n\nWhat's your name?? ");
 		String name = input.nextLine();
 		System.out.println("The Clan: ");
 		System.out.println("1. Method Man\n2. RZA\n3. Ol' Dirty Bastard\n4. GZA\n5. Ghostface Killah\n6. " + name + "\n7. Raekwon\n8. Inspectah Deck\n9. U-God\n10. Cappadonna\n\nWelcome to the clan.");
@@ -66,14 +66,14 @@ public class Methods {
 			x = 5;
 		} else if (num1.equals("six") || num1.equals("Six")) {
 			x = 6;
-		} else if (num1.equals("seven") || num1.equals("Seven")) {
+/*nice*/} else if (num1.equals("seven") || num1.equals("Seven")) {
 			x = 7;
 		} else if (num1.equals("eight") || num1.equals("Eight")) {
 			x = 8;
 		} else if (num1.equals("nine") || num1.equals("Nine")) {
 			x = 9;
 		} else {
-/* nice */	return 999;
+			return 999;
 		}
 		
 		if (num2.equals("zero") || num2.equals("Zero")) {
@@ -134,11 +134,10 @@ public class Methods {
 		//takes user's word and counts how many characters are in it
 		if (x.contentEquals("OnceUponaTimeinShaolin") || x.equals("onceuponatimeinshaolin") || x.equals("OnceUponATimeInShaolin")) {
 			onceUponATime();
-		} else {
-			double wordLength = x.length(); //counts characters in string
-			return wordLength;
 		}
-		return 0;
+		double wordLength = x.length(); //counts characters in string
+		return wordLength;
+		
 		
 	}
 }

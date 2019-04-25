@@ -13,7 +13,7 @@ public class WuTang {
 		Methods wuTangClan = new Methods(3); //creates object that corresponds with the constructor in "Methods"
 		Scanner input = new Scanner(System.in); //opens scanner used for the six methods
 		
-		/*
+	
 	//methodMan
 		//input
 		System.out.println("1. Method Man"); //displays title
@@ -68,7 +68,7 @@ public class WuTang {
 		int numInt4 = input.nextInt(); //stores
 //nice	//output
 		System.out.println("\t" + wuTangClan.inspectahDeck(numDouble1, numInt4)); // calls and displays
-		*/
+		
 		
 	//cappadonna
 		//input
