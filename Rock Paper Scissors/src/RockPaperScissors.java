@@ -18,7 +18,7 @@ public class RockPaperScissors {
 		String compChoice = checker.checkTheChoice(randomChoice);
 		System.out.println("Computer chooses " + compChoice);
 		
-	//
+	//player choose
 		String chooseOrNo = JOptionPane.showInputDialog(null, "Would you like to randomize your selection? (Y/N)", "Choose?", JOptionPane.QUESTION_MESSAGE);
 		checker.playerSelect(chooseOrNo);
 		

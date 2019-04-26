@@ -1,3 +1,7 @@
+//imports
+import java.util.Random;
+
+import javax.swing.JOptionPane;
 
 public class ChoiceChecker {
 
@@ -19,10 +23,17 @@ public class ChoiceChecker {
 	}
 	
 	public String playerSelect(String choice) {
+		Random rand = new Random();
 		if (choice.equals("Y") || choice.equals("y")) {
-			
+			int playerChoice = rand.nextInt(3) + 1;
+			String playerChoiceString = checkTheChoice(playerChoice);
+			System.out.println("Player chooses " + playerChoiceString);
+			return playerChoiceString;
+		} else {
+			String playerChoice = JOptionPane.showInputDialog(null, "Rock, Paper, or Scissors?", "Choose", JOptionPane.QUESTION_MESSAGE);
+			System.out.println("Player chooses " + playerChoice);
+			return playerChoice;
 		}
-		return null;
 	}
 	
 	public String winnerSelcection() {
