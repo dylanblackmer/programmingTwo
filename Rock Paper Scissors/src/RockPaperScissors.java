@@ -12,11 +12,11 @@ public class RockPaperScissors {
 		ChoiceChecker checker = new ChoiceChecker();
 		Random rand = new Random();
 		
+	//rules
+		JOptionPane.showMessageDialog(null, "Welcome to Rock, Paper, Scissors!\nFirst, the computer randomly chooses a number.\nThen, you will be asked if you'd like a random pick, you may reply yes (Y) or no (N).\nFinally, choices will be compared and a winner announced.", "Welcome", JOptionPane.INFORMATION_MESSAGE);
+		
 	//computer choose
-		int randomChoice = rand.nextInt(3) + 1;
-		System.out.println("Computer choice: " + randomChoice);
-		String compChoice = checker.checkTheChoice(randomChoice);
-		System.out.println("Computer chooses " + compChoice);
+		String compChoiceString = checker.computerSelect();
 		
 	//player choose
 		String chooseOrNo = JOptionPane.showInputDialog(null, "Would you like to randomize your selection? (Y/N)", "Choose?", JOptionPane.QUESTION_MESSAGE);

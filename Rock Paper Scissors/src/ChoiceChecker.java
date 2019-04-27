@@ -5,28 +5,49 @@ import javax.swing.JOptionPane;
 
 public class ChoiceChecker {
 
+//initialize
 	public ChoiceChecker() {
 		
 	}
+	Random rand = new Random();
 	
-	public String checkTheChoice(int compChoice) {
-		
-		if (compChoice == 1) {
+//functions
+	public String choiceNumToString(int choice) {
+		if (choice == 1) {
 			return "rock";
-		} else if (compChoice == 2) {
+		} else if (choice == 2) {
 			return "paper";
-		} else if (compChoice == 3) {
+		} else if (choice == 3) {
 			return "scissors";
 		} else {
 			return "error";
 		}
 	}
 	
+	public int choiceStringToNum(String choice) {
+		if (choice.equals("rock")) {
+			return 1;
+		} else if (choice.equals("paper")) {
+			return 2;
+		} else if (choice.equals("scissors")) {
+			return 3;
+		} else {
+			return 0;
+		}
+	}
+	
+	public String computerSelect() {
+		int compChoice = rand.nextInt(3) + 1;
+		String compChoiceString = choiceNumToString(compChoice);
+		System.out.println("Computer chooses " + compChoiceString);
+		return compChoiceString;
+	}
+	
+
 	public String playerSelect(String choice) {
-		Random rand = new Random();
 		if (choice.equals("Y") || choice.equals("y")) {
 			int playerChoice = rand.nextInt(3) + 1;
-			String playerChoiceString = checkTheChoice(playerChoice);
+			String playerChoiceString = choiceNumToString(playerChoice);
 			System.out.println("Player chooses " + playerChoiceString);
 			return playerChoiceString;
 		} else {
