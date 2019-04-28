@@ -20,7 +20,20 @@ public class RockPaperScissors {
 		
 	//player choose
 		String chooseOrNo = JOptionPane.showInputDialog(null, "Would you like to randomize your selection? (Y/N)", "Choose?", JOptionPane.QUESTION_MESSAGE);
-		checker.playerSelect(chooseOrNo);
+		String playerChoiceString = checker.playerSelect(chooseOrNo);
+		
+	//convert to numbers
+		int compChoiceInt = checker.choiceStringToNum(compChoiceString);
+		int playerChoiceInt = checker.choiceStringToNum(playerChoiceString);
+		
+	//select winner
+		String winner = checker.winnerSelcection(compChoiceInt, playerChoiceInt);
+		System.out.println("Winner: " + winner);
+		
+	//final output
+		JOptionPane.showMessageDialog(null, winner + " won!");
+		
+		
 		
 	}
 

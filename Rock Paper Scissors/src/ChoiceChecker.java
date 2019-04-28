@@ -57,9 +57,42 @@ public class ChoiceChecker {
 		}
 	}
 	
-	public String winnerSelcection() {
-		
-		return null;
+	public String winnerSelcection(int comp, int player) {
+		//key: 0 = tie, 1 = player, 2 = computer, 3 = error
+		if (comp == 1) {
+			if (player == 1) {
+				return "Tie";
+			} else if (player == 2) {
+				return "Player";
+			} else if (player == 3) {
+				return "Computer";
+			} else {
+				return null;
+			}
+		} else if (comp == 2) {
+			if (player == 1) {
+				return "Computer";
+			} else if (player == 2) {
+				return "Tie";
+			} else if (player == 3) {
+				return "Player";
+			} else {
+				return null;
+			}
+		} else if (comp == 3) {
+			if (player == 1) {
+				return "Player";
+			} else if (player == 2) {
+				return "Computer";
+			} else if (player == 3) {
+				return "Tie";
+			} else {
+				return null;
+			}
+		} else {
+			return null;
+		}
+	
 	}
 	
 }
