@@ -10,6 +10,7 @@ public class RockPaperScissors {
 
 	//initialize
 		ChoiceChecker checker = new ChoiceChecker();
+		/*
 		Random rand = new Random();
 		
 	//rules
@@ -32,7 +33,9 @@ public class RockPaperScissors {
 		
 	//final output
 		JOptionPane.showMessageDialog(null, winner + " won!");
+		*/
 		
+		checker.initialize();
 		
 		
 	}
