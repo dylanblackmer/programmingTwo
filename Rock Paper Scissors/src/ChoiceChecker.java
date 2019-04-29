@@ -19,6 +19,7 @@ public class ChoiceChecker {
 		//gives player the rules
 		JOptionPane.showMessageDialog(null, "Welcome to Rock, Paper, Scissors!\nFirst, you will be asked if you'd like to choose a random choice.\nThen, your selection will be compared to the computer's and a winner will be announced.\nThe game can be replayed over and over and your score, as well as the computer's, will be kept.\nEnjoy the game!", "Introduction", JOptionPane.INFORMATION_MESSAGE);
 		String name = JOptionPane.showInputDialog(null, "What's your name?", "Introduction", JOptionPane.QUESTION_MESSAGE); //prompts user for their name
+		
 		theGame(name); //runs main game block
 	}
 	
@@ -34,8 +35,8 @@ public class ChoiceChecker {
 		//convert to numbers
 		int compChoiceInt = choiceStringToNum(compChoiceString); //converts computer's choice to number
 		int playerChoiceInt = choiceStringToNum(playerChoiceString); //converts player's choice to number
-		//announcment
-		
+		//announcement
+		JOptionPane.showMessageDialog(null, name + " chose " + playerChoiceString + ".\nComputer chose " + compChoiceString + ".", "Game " + numOfGames, JOptionPane.INFORMATION_MESSAGE);
 		//winner select
 		String winner = winnerSelcection(compChoiceInt, playerChoiceInt); //using the computer and player's choices, winner is selected
 		System.out.println("Winner: " + winner); //output to console for debug
@@ -74,7 +75,7 @@ public class ChoiceChecker {
 		} else if (choice == 3) {
 			return "scissors";
 		} else {
-/* nice */	return "error";
+			return "error";
 		}
 	}
 	
