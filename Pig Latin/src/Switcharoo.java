@@ -23,6 +23,7 @@ public class Switcharoo {
 			String latinWord = englishToPig(englishWord);
 			int translateAgain = JOptionPane.showConfirmDialog(null, "All done!\nOriginal word: " + englishWord + ".\nPig Latin: " + latinWord + ".\nTranslate again?", "Pig Latin Translator", JOptionPane.YES_NO_OPTION);
 			if (translateAgain == 0) {
+				System.out.println(" ");
 				initialize();
 			} else {
 				JOptionPane.showMessageDialog(null, "Thanks for translating with us.\nHave a nice day!", "Pig Latin Tanslator", JOptionPane.PLAIN_MESSAGE);
@@ -31,6 +32,7 @@ public class Switcharoo {
 			System.out.println("User chose pig to eng");
 			String latinWord = JOptionPane.showInputDialog(null, "What word would you like to translate?", "Pig Latin Translator", JOptionPane.QUESTION_MESSAGE).toLowerCase();
 			String englishWord = pigToEnglish(latinWord);
+			int translateAgain = JOptionPane.showConfirmDialog(null, "All done!\nOriginal word: " + latinWord + ".\nEnglish: " + englishWord + ".\nWould you like to translate another word?", "Pig Latin Translator", JOptionPane.YES_NO_OPTION);
 		} else {
 			JOptionPane.showMessageDialog(null, "Error: Please restart program.", "Pig Latin Translator", JOptionPane.ERROR_MESSAGE);
 		}
@@ -42,11 +44,15 @@ public class Switcharoo {
 		latinWord = latinWord.toLowerCase();
 		int latinIndex = latinWord.length() - 1;
 		System.out.println("Latin word: " + latinWord);
-		if (latinWord.substring(0, 1).equals("a") || latinWord.substring(0, 1).equals("e") || latinWord.substring(0, 1).equals("i") || latinWord.substring(0, 1).equals("o") || latinWord.substring(0, 1).equals("u") || latinWord.substring(0, 1).equals("y")) {
+		if (latinWord.substring(latinIndex - 2).equals("way")) {
 			newWord = latinWord.substring(0, latinIndex - 2);
 			System.out.println("New word: " + newWord);
+			return newWord;
+		} else {
+			newWord = latinWord.substring(latinIndex - 2, latinIndex - 1) + latinWord.substring(0, latinIndex - 2);
+			System.out.println("New Word: " + newWord);
+			return newWord;
 		}
-		return null;
 		
 	}
 	
@@ -56,9 +62,11 @@ public class Switcharoo {
 		System.out.println("English word: " + englishWord);
 		if (englishWord.substring(0, 1).equals("a") || englishWord.substring(0, 1).equals("e") || englishWord.substring(0, 1).equals("i") || englishWord.substring(0, 1).equals("o") || englishWord.substring(0, 1).equals("u") || englishWord.substring(0, 1).equals("y")) {
 			newWord = englishWord + "way";
+			System.out.println("New word: " + newWord);
 		} else {
-			newWord = englishWord.substring(1) + englishWord.substring(0, 1) + "ay";	
-		}
+			newWord = englishWord.substring(1) + englishWord.substring(0, 1) + "ay";
+			System.out.println("New word: " + newWord);
+/*nice*/}
 		return newWord;
 		
 	}
