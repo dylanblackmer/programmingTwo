@@ -16,7 +16,7 @@ public class NameFlipper {
 		System.out.println("Name: " + name); //outputs name for debug
 		String flippedName = nameFlip(name); //flips name
 	//output and replay
-		//gives user their flipped name, offers to flip another
+		//gives user their fliped name, offers to flip another
 		int yesNo = JOptionPane.showConfirmDialog(null, "All done!\nYour name: " + name + "\nFlipped name: " + flippedName + "\n\nWould you like to flip another name?", "Redrum", JOptionPane.YES_NO_OPTION);
 		if (yesNo == 0) { //checks user's response
 			initialize(); //reruns program
@@ -28,6 +28,7 @@ public class NameFlipper {
 	}
 	
 	public String nameFlip(String name) {
+		
 		int nameIndex = name.length() - 1; //takes length and subtracts one for index number
 		System.out.println("Name length: " + (nameIndex + 1)); //outputs length for debug
 		String flippedName = ""; //initializes flipped name string
